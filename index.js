@@ -73,6 +73,11 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+    next();
+});
+
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
