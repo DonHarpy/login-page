@@ -68,8 +68,10 @@ const express = require('express');
 const path = require('path');
 const Collection = require('./config');
 const validator = require('validator');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 
 app.set('view engine', 'ejs');
 app.use(express.json());
