@@ -74,7 +74,7 @@ const app = express();
 app.use(cors());
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+    res.setHeader('Access-Control-Allow-Origin', 'mongodb+srv://mustafaharpy100:Harpy222_@loginapi.ark9wv5.mongodb.net/');
     next();
 });
 
